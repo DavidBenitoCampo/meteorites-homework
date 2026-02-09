@@ -40,7 +40,7 @@ python3 meteorite_analysis_task.py
 
 ```
 Total entries found: 1000
-The heaviest meteorite is Sikhote-Alin with mass 23000000
+The heaviest meteorite is Sikhote-Alin with mass 23000000 (grams).
 The most frequent year is 1933
 ```
 
@@ -62,7 +62,7 @@ curl -s https://dmachek.github.io/meteorites-homework/meteorite_landings.json | 
 # Verify most frequent year
 curl -s https://dmachek.github.io/meteorites-homework/meteorite_landings.json | \
   jq -r '.[].year | select(. != null)' | cut -c 1-4 | sort | uniq -c | sort -nr | head -1
-# Output: 16 1933
+# Output: 16 landings, year 1933
 ```
 
 ---
